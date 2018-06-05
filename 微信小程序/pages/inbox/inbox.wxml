@@ -1,0 +1,13 @@
+<!--pages/inbox/inbox.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset"class="">
+  <view name="line1" id="1">
+     <text>收件箱</text>
+  </view>
+  <view name="line2" id="2">
+     <text>收件箱</text>
+  </view>
+  <view name="line3" id="3">
+     <text>收件箱</text>
+  </view>
+  
+</form>

@@ -1,0 +1,18 @@
+<!--pages/outbox/outbox.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset"class="">
+  <view name="line1" id="1">
+     <text>hahahaha</text>
+  </view>
+  <view name="line2" id="2">
+     <text>hahahaha</text>
+  </view>
+  <view name="line3" id="3">
+     <text>hahahaha</text>
+  </view>
+  <view>
+     <text>hahahaha</text>
+  </view>
+  <view>
+     <text>hahahaha</text>
+  </view>
+</form>

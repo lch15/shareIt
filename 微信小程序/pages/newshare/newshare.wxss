@@ -1,0 +1,61 @@
+/* pages/newshare/newshare.wxss */
+.section1{
+  margin:15px 40px 015px 10px;
+  border:  1px solid red;
+  border-color: grey;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.head{
+  height: 80px
+}
+.section2{
+  margin:10px 55px 0px 260px;
+  border:  1px solid red;
+  border-color: grey;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 30px
+}
+.add{
+  background-color:DarkCyan;
+  color:white;
+  height: 100%;
+  font-size:80%;
+  text-align: center;
+  justify-content: center;
+}
+.section3{
+  margin:15px 40px 0px 10px;
+  border:  1px solid red;
+  border-color: grey;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 350px
+}
+.section6{
+  margin:15px 40px 0px 200px;
+  border:  1px solid red;
+  border-color: grey;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px
+}
+#b1{
+  margin:10px 10px 0px 95px;
+   border:  1px solid red;
+   border-color: grey;
+  background-color:DarkCyan;
+  color:white;
+}
+#b2{
+  margin:0px 0px 0px 10px;
+  border:  1px solid red;
+  border-color: grey;
+  background-color:DarkCyan;
+  color:white;
+}

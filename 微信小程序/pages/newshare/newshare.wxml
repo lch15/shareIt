@@ -1,0 +1,15 @@
+<!--pages/newshare/newshare.wxml-->
+<view class="section1">
+  <textarea class="head" bindblur="bindTextAreaBlur" auto-focus auto-height placeholder="标题：" />
+</view>
+<view class="section2">
+  <button class="add" bindtap='accessory'>附件</button>
+</view>
+<view class="section3">
+  <textarea placeholder="正文："/>
+</view>
+<view class="section4">   
+    <button id="b1" bindtap="seachid" size="mini">预览</button>
+    <button id="b2" bindtap="searchpersonid" size="mini">发送</button>
+  </view>
+

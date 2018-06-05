@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/newshare/newshare",
+    "pages/search/search",
+   
+    "pages/outbox/outbox",
+    "pages/inbox/inbox",  
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#008B8B",
+    "navigationBarTitleText": "ShareIt",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "position":"bottom",
+
+    "list": [
+     
+      {
+       "pagePath": "pages/search/search",
+       "selectedColor": "#32aa9e",
+      "text": "搜索",
+      "iconPath": "image/f1.png",
+      "selectedIconPath": "image/f2.png"
+      },
+      {
+        "pagePath": "pages/newshare/newshare",
+        "text": "分享",
+        "selectedColor": "#32aa9e",
+        "iconPath": "image/w1.png",
+        "selectedIconPath": "image/w2.png"
+      },
+      {
+        "pagePath": "pages/outbox/outbox",
+        "selectedColor": "#32aa9e",
+        "text": "发件箱",
+        "iconPath": "image/s1.png",
+        "selectedIconPath": "image/s2.png"         
+      },
+      {
+        "pagePath": "pages/inbox/inbox",
+        "selectedColor": "#32aa9e",
+        "text": "收件箱",
+        "iconPath": "image/r1.png",
+        "selectedIconPath": "image/r2.png"
+      }
+    ]
+  }
+    
+ 
+}
