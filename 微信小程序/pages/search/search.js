@@ -1,8 +1,17 @@
+var app=getApp()
 Page({
   data: {
     focus: false,
-    inputValue: ''
+    inputValue: '',
+    keywords:null,
+    validation:'',
+    searchresult:null
   },
+  searchinput: function (e) {
+    this.setData({
+      keywords: e.detail.value
+    })
+  },  
   bindButtonTap: function() {
     this.setData({
       focus: true
@@ -51,5 +60,46 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  searchid:function(){
+    var that=this
+    if (that.data.keywords.replace(/\s+/g, '').length==0)
+      this.data.validation='输入不能为空'
+    else{
+      this.data.validation = ''
+    wx.request({
+      url: 'test.php', //仅为示例，并非真实的接口地址
+      data: {
+        pageid: that.data.keywords
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        this.data.searchresult=res.data.searchresult
+      }
+    })
+    }
+  },
+  searchpersonid:function(){
+    var that = this
+    if (that.data.keywords.replace(/\s+/g, '').length == 0)
+      this.data.validation = '输入不能为空'
+    else {
+      this.data.validation = ''
+      wx.request({
+        url: 'test.php', //仅为示例，并非真实的接口地址
+        data: {
+          openid: app.globalData.useropenid,
+          box:outbox
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          this.data.searchresult = res.data.searchresult
+        }
+      })
+    }
   }
 })

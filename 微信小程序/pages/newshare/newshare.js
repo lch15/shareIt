@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+  loginfo:'d'
   },
 
   /**
@@ -62,5 +62,16 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  accessory: function(){
+    wx.getSavedFileList({
+      success: function (res) {
+        console.log(res.fileList)
+        console.log('111')
+      },
+      fail:function(res){
+        console.log('fail')
+      }
+    })
+  },
 })

@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.98",
 	"appid": "wxca45b4d74f06ecb0",
-	"projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"projectname": "ShareIt",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

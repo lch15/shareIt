@@ -12,4 +12,6 @@
     <button id="b1" bindtap="seachid" size="mini">预览</button>
     <button id="b2" bindtap="searchpersonid" size="mini">发送</button>
   </view>
+ 
+
 

@@ -1,18 +1,32 @@
 // pages/inbox/inbox.js
+var app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+  searchresult:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.request({
+      url: 'test.php', //仅为示例，并非真实的接口地址
+      data: {
+        openid: app.globalData.useropenid,
+        box: 'inbox'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        this.data.searchresult = res.data.searchresult
+      }
+    })
   },
 
   /**
@@ -47,7 +61,20 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    var that = this
+    wx.request({
+      url: 'test.php', //仅为示例，并非真实的接口地址
+      data: {
+        openid: app.globalData.useropenid,
+        box: 'inbox'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        this.data.searchresult = res.data.searchresult
+      }
+    })
   },
 
   /**
