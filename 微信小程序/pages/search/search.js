@@ -5,7 +5,7 @@ Page({
     inputValue: '',
     keywords:null,
     validation:'',
-    searchresult:null
+    searchresult:[]
   },
   searchinput: function (e) {
     this.setData({
@@ -63,41 +63,46 @@ Page({
   },
   searchid:function(){
     var that=this
-    if (that.data.keywords.replace(/\s+/g, '').length==0)
-      this.data.validation='输入不能为空'
-    else{
-      this.data.validation = ''
-    wx.request({
-      url: 'test.php', //仅为示例，并非真实的接口地址
-      data: {
-        pageid: that.data.keywords
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        this.data.searchresult=res.data.searchresult
-      }
-    })
-    }
-  },
-  searchpersonid:function(){
-    var that = this
-    if (that.data.keywords.replace(/\s+/g, '').length == 0)
+    if (that.data.keywords==null||that.data.keywords.replace(/\s+/g, '').length==0)
       this.data.validation = '输入不能为空'
     else {
       this.data.validation = ''
       wx.request({
-        url: 'test.php', //仅为示例，并非真实的接口地址
+        url: 'https://www.yhmeng.top/search_article', //仅为示例，并非真实的接口地址
         data: {
-          openid: app.globalData.useropenid,
-          box:outbox
+          article_id: that.data.keywords
         },
+        method: "POST",
         header: {
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          this.data.searchresult = res.data.searchresult
+          that.setData({ 
+            searchresult:res.data.result 
+            });
+        }
+      })
+    }
+  },
+  searchpersonid:function(){
+    var that = this
+    if (that.data.keywords == null ||that.data.keywords.replace(/\s+/g, '').length == 0)
+      this.data.validation = '输入不能为空'
+    else {
+      that.data.validation = ''
+      wx.request({
+        url: 'https://www.yhmeng.top/search_user', //仅为示例，并非真实的接口地址
+        data: {
+          author_id: app.globalData.useropenid
+        },
+        method: "POST",
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          that.setData({
+            searchresult: res.data.result
+          });
         }
       })
     }

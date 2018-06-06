@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  searchresult:null
+  searchresult:[]
   },
 
   /**
@@ -15,16 +15,18 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: 'test.php', //仅为示例，并非真实的接口地址
+      url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
       data: {
-        openid: app.globalData.useropenid,
-        box:'outbox'
+        user_id: app.globalData.useropenid
       },
+      method: 'POST',
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        this.data.searchresult = res.data.searchresult
+        that.setData({
+          searchresult: res.data.result
+        });
       }
     })
   },
@@ -40,7 +42,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
@@ -63,16 +65,18 @@ Page({
   onPullDownRefresh: function () {
     var that = this
     wx.request({
-      url: 'test.php', //仅为示例，并非真实的接口地址
+      url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
       data: {
-        openid: app.globalData.useropenid,
-        box: 'outbox'
+        user_id: app.globalData.useropenid
       },
+      method: 'POST',
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        this.data.searchresult = res.data.searchresult
+        that.setData({
+          searchresult: res.data.result
+        });
       }
     })
   },
