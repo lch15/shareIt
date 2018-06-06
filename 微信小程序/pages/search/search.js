@@ -1,5 +1,6 @@
 var app=getApp()
 Page({
+  
   data: {
     focus: false,
     inputValue: '',
@@ -68,7 +69,7 @@ Page({
     else{
       this.data.validation = ''
     wx.request({
-      url: 'test.php', //仅为示例，并非真实的接口地址
+      url: 'test.php', //仅为示例，并非真实的接口地址     
       data: {
         pageid: that.data.keywords
       },
@@ -80,8 +81,12 @@ Page({
       }
     })
     }
+    
   },
   searchpersonid:function(){
+    wx.navigateTo({
+      url: '../search_user/search_user',
+    })
     var that = this
     if (that.data.keywords.replace(/\s+/g, '').length == 0)
       this.data.validation = '输入不能为空'

@@ -1,0 +1,13 @@
+<!--pages/searchresultshow/searchresultshow.wxml-->
+<view wx:if="{{showData.length>0}}">
+    <view class="item" wx:for="{{showData}}">  
+    <navigator url="../item_detail/item_detail"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息-->
+    <view class="td">  
+    {{item.id}} {{item.title}} {{item.author}} {{item.create_time}}
+  </view>  
+  </navigator>
+</view>  
+</view>
+<view wx:else="{{showData.length==0}}">
+    <text>not found!</text>
+</view>

@@ -1,12 +1,14 @@
 {
   "pages": [
-    "pages/newshare/newshare",
+    "pages/search_user/search_user",
     "pages/search/search",
-   
+   "pages/newshare/newshare",
     "pages/outbox/outbox",
     "pages/inbox/inbox",  
     "pages/logs/logs",
-    "pages/index/index"
+    "pages/index/index",
+    
+    "pages/item_detail/item_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
