@@ -1,5 +1,6 @@
 var app=getApp()
 Page({
+  
   data: {
     focus: false,
     inputValue: '',
@@ -67,6 +68,7 @@ Page({
       this.data.validation = '输入不能为空'
     else {
       this.data.validation = ''
+<<<<<<< HEAD
       wx.request({
         url: 'https://www.yhmeng.top/search_article', //仅为示例，并非真实的接口地址
         data: {
@@ -82,9 +84,27 @@ Page({
             });
         }
       })
+=======
+    wx.request({
+      url: 'test.php', //仅为示例，并非真实的接口地址     
+      data: {
+        pageid: that.data.keywords
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        this.data.searchresult=res.data.searchresult
+      }
+    })
+>>>>>>> 4e45650f5664cdf1ee7415a57fa21f3d9147a94c
     }
+    
   },
   searchpersonid:function(){
+    wx.navigateTo({
+      url: '../search_user/search_user',
+    })
     var that = this
     if (that.data.keywords == null ||that.data.keywords.replace(/\s+/g, '').length == 0)
       this.data.validation = '输入不能为空'
