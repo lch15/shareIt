@@ -1,0 +1,4 @@
+/* pages/searchresultshow/searchresultshow.wxss */
+.item{
+background-color: lightgray 
+}
