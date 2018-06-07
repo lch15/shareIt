@@ -28,7 +28,7 @@
    <!-- 底部view样式 -->
    <view class="bottomView">
     <view class="bottomItemView">
-     <image class="bottomItemImage" src="../../image/ding.png" />
+    
      <text class="bottomItemText"> Article_ID : {{item.id}}</text>
       <text class="bottomItemText">    </text>
       <text class="bottomItemText">    </text>
