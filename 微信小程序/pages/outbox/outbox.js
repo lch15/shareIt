@@ -1,12 +1,15 @@
 // pages/outbox/outbox.js
 var app=getApp()
+var Data = require('../outbox/outbox_list.js')  
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+
   searchresult:[]
+
   },
 
   /**

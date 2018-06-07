@@ -1,2 +1,33 @@
 <!--pages/item_detail/item_detail.wxml-->
-<text>item_detail显示结果</text>
+
+
+
+    <view class="book-meta">
+        <view class="meta-info">
+            <text class="book-title">收到v基本v</text>
+            <text class="other-meta">文章id：</text>
+            <text class="other-meta">发布者：</text>
+            <text class="other-meta">发布时间：</text>
+          
+        </view>
+        <view class="range">
+            <text class="viewers">0  阅读</text>
+            <text class="viewers">{{bookData.rating.numRaters ? bookData.rating.numRaters : 0}}  转发</text>
+            
+        </view>
+        <view> <image class="bottomItemImage" src="../../image/relay.png" /></view>
+        
+    </view>
+
+    <view class="book-intro" >
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">dfsgjbfaeiug</text>
+    </view>
+
+    <view class="book-intro">
+        <view class="intro-header"><text>正文</text></view>
+        <text class="intro-content">暗房东是个鸡肋若不能批塞茹不发的v了世界杯verb那里空间分布</text>
+    </view>
+
+
+

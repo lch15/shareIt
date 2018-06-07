@@ -8,3 +8,137 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.ui-tips {
+  margin-top: 20rpx;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #c7c7c7; }
+/*search样式*/
+.search-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+  color: white;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  z-index: 100;
+}
+.pick{
+  background: #FFF;
+  color: grey;
+  padding: 5px 10rpx;
+  height: 40rpx;
+  width: 20%;
+  border-radius: 8rpx;
+}
+.search-container input {
+  background: #FFF;
+  color: #AAA;
+  padding: 5rpx 5rpx;
+  height: 40rpx;
+  width: 100%;
+  border-radius: 8rpx;
+  margin-left: 10rpx
+}
+.search-container icon {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 40rpx;
+}
+
+
+/*整体view样式*/
+.containsView{
+ padding: 15rpx 15rpx 15rpx 15rpx;
+ margin-top: 3px;
+ margin-bottom: 3px;
+ background-color: white;
+}
+/*头部整体样式*/
+.topContainsView{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ margin-bottom: 3px;
+}
+ 
+/**
+ * 头像样式
+*/
+.profileImage{
+ width: 60rpx;
+ height: 60rpx;
+ border-radius: 30rpx;
+}
+ 
+/*头部显示名字和时间整体样式*/
+.topRightView{
+ margin-left: 15rpx;
+ display: flex;
+ flex-direction: column;
+}
+/*用户名称样式*/
+.topRightName{
+ font-size: 30rpx;
+}
+
+/*时间样式*/
+.topRightTime{
+ font-size: 14rpx;
+ color: #b8b2b2;
+ margin-top: 10rpx;
+}
+ #s{
+
+   margin:0px 10px 0px 250px;
+   border:  1px solid red;
+   border-color: grey;
+
+ }
+/*中间样式*/
+ .centerContent{  
+ margin-left: 20rpx;
+ }
+/*底部view整体样式*/
+.bottomView{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+}
+/*每个Item样式*/
+.bottomItemView{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-top: 18rpx;
+ padding-left: 0rpx;
+ padding-right: 10rpx;
+}
+/*Item样式中的图标样式 顶 踩 分享 评论*/
+.bottomItemImage{
+  margin-right: 0px;
+  margin-left: 45rpx;
+ width: 40rpx;
+ height: 40rpx;
+}
+/*Item中的文字样式 顶 踩 分享 评论*/
+.bottomItemText{
+ font-size: 25rpx;
+ color: #b8b2b2;
+ margin-left: 15rpx;
+ margin-top: 0rpx;
+}
+ 
+/*分割线样式*/
+.divLine{
+ background: #f3f3f3;
+ width: 100%;
+ height: 15rpx;
+}

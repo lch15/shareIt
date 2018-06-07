@@ -1,3 +1,1 @@
 <!--pages/test/test.wxml-->
-<text>孟宇航是个傻子</text>
-<view wx:for="{{array}}"> {{item}} </view>

@@ -1,13 +1,47 @@
-<!--pages/searchresultshow/searchresultshow.wxml-->
-<view wx:if="{{showData.length>0}}">
-    <view class="item" wx:for="{{showData}}">  
-    <navigator url="../item_detail/item_detail"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息-->
-    <view class="td">  
-    {{item.id}} {{item.title}} {{item.author}} {{item.create_time}}
-  </view>  
-  </navigator>
-</view>  
+  <view class="divLine"></view>
+<view class="search-container">
+  <picker class="pick" bindchange="bindCasPickerChange" value="casIndex1" range="{{casArray}}">     
+   <view>
+       <text>{{casArray[casIndex]}}</text>
+      </view>
+      </picker>
+  <input type="text" bindinput="searchInputEvent" placeholder="输入搜索"></input><icon bindtap="searchClickEvent"  type="search" size="20"/>
+   
 </view>
-<view wx:else="{{showData.length==0}}">
-    <text>not found!</text>
-</view>
+<scroll-view scroll-y="true" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower" style="height: 100%" >
+
+  <view  wx:for="{{showData}}">
+   <navigator url="/pages/item_detail/item_detail"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息-->
+  <!-- 分割线 -->
+  <view class="divLine"></view>
+  <!-- 整体item样式 -->
+  <view class="containsView">
+   <view class="topContainsView">
+    <image class="profileImage" src="/image/my.png"  /><!--头像-->
+    <view class="topRightView">
+     <text class="topRightName">{{item.author}}</text>    
+    </view>
+
+   </view>
+   <!-- 中间内容 -->
+   <text class="centerContent">{{item.title}}</text>
+   <!-- 底部view样式 -->
+   <view class="bottomView">
+    <view class="bottomItemView">
+     <image class="bottomItemImage" src="../../image/ding.png" />
+     <text class="bottomItemText"> Article_ID : {{item.id}}</text>
+      <text class="bottomItemText">    </text>
+      <text class="bottomItemText">    </text>
+     <text class="bottomItemText">Publish_time : {{item.create_time}}</text>
+     <image class="bottomItemImage" src="../../image/relay.png" />
+
+    </view>
+   </view>
+  </view>
+ </navigator>
+</view> 
+  <view class="divLine"></view>
+     <view class="ui-tips">
+        <text>—— 没有更多内容了 ——</text>       
+    </view>
+</scroll-view>

@@ -1,1 +1,16 @@
 /* pages/outbox/outbox.wxss */
+.bottomItemView2{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin-left: 500rpx;
+ padding-left: 50rpx;
+ padding-right: 10rpx;
+}
+.bottomItemImage{
+  margin-right: 0px;
+  margin-left: 45rpx;
+  width:100rpx;
+  height: 100rpx;
+}

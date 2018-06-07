@@ -1,12 +1,17 @@
 // pages/inbox/inbox.js
 var app=getApp()
+var Data = require('../inbox/inbox_list.js')  
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  searchresult:[]
+
+  
+     
+ searchresult:[]
+
   },
 
   /**

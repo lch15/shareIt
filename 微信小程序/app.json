@@ -1,13 +1,18 @@
 {
   "pages": [
-    "pages/search_user/search_user",
     "pages/search/search",
+  "pages/outbox/outbox",
+   
+    "pages/inbox/inbox",
+    
+    "pages/search_user/test",     
    "pages/newshare/newshare",
-    "pages/outbox/outbox",
-    "pages/inbox/inbox",  
+    "pages/item_detail_delete/item_detail_delete",
+    
+    "pages/search_user/search_user",
+   
     "pages/logs/logs",
     "pages/index/index",
-    
     "pages/item_detail/item_detail"
   ],
   "window": {
