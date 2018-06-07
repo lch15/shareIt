@@ -1,1 +1,115 @@
-/* pages/item_detail_delete/item_detail_delete.wxss */
+/* pages/item_detail/item_detail.wxss */
+page {
+    background: #EEE;
+}
+.profileImage{
+  margin-top: 18rpx;
+ width: 60rpx;
+ height: 60rpx;
+ border-radius: 30rpx;
+}
+.buttonview{
+   margin:0px 0px 0px 0px;  
+   position: fixed;
+   height: 90rpx;
+   bottom: 0;
+   width: 50%;
+}
+.buttonview2{
+   margin:0px 0px 0px 50%;   
+   position: fixed;
+   bottom: 0;
+   height: 90rpx;
+   width: 50%;
+   justify-content: center; 
+}
+.buttontext{
+  display: flex;  
+  flex-direction: column; 
+  color: grey;
+}
+.cover-container {
+    background: #42BD56;
+    text-align: center;
+    padding: 50rpx 0;
+}
+.cover-container image {
+    display: inline-block;
+    width: 300rpx;
+    height: 400rpx;
+}
+
+.book-meta {
+    position: relative;
+    padding: 20rpx;
+    overflow: hidden;
+    margin-right: 20rpx
+}
+.book-meta .range {
+    position: absolute;
+    top: 40rpx;
+    right: 150rpx;
+    width: 180rpx;
+    background: #FFF;
+    padding: 15rpx 10rpx;
+    text-align: center;
+    box-shadow: 2px 2px 10px #CCC;
+}
+.book-meta .meta-info {
+    margin-right: 200rpx;
+}
+.meta-info text {
+    display: block
+}
+.book-title {
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.other-meta {
+    padding-top: 10rpx;
+    color: #888;
+    font-size: 30rpx;
+}
+.range text {
+    display: block;
+}
+.range .score {
+    font-size: 50rpx;
+    font-weight: bold;
+}
+.range .starts {
+    font-size: 40rpx;
+}
+.range .viewers {
+    font-size: 30rpx;
+}
+
+.book-intro {
+    margin-bottom: 40rpx;
+    padding: 20rpx;
+    background: #FAFAFA;
+}
+.book-intro .intro-header {
+    color: #888;
+    font-weight: bold;
+    padding: 40rpx 0;
+    font-size: 40rpx;
+}
+.book-intro .intro-content {
+    font-size: 35rpx;
+    line-height: 2;
+    text-align: justify
+}
+.bottomItemImage{
+  margin-right: 0px;
+  margin-left: 45rpx;
+ width: 40rpx;
+ height: 40rpx;
+ position: absolute;
+    top: 70rpx;
+    right: 50rpx;   
+    background: #FFF;
+    padding: 10rpx 10rpx;
+    text-align: center;
+    box-shadow: 2px 2px 10px #CCC;
+}

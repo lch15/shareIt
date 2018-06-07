@@ -11,7 +11,7 @@
 <scroll-view scroll-y="true" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower" style="height: 100%" >
 
   <view  wx:for="{{showData}}">
-   <navigator url="/pages/item_detail/item_detail"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息-->
+   <navigator url="/pages/item_detail_delete/item_detail_delete"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息-->
   <!-- 分割线 -->
   <view class="divLine"></view>
   <!-- 整体item样式 -->

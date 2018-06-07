@@ -6,12 +6,15 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-
-  
+  data: { 
      
- searchresult:[]
-
+ searchresult:[],
+ casArray: ['分享', '删除'],
+  },
+  bindCasPickerChange: function (e) {
+    this.setData({
+      casIndex: e.detail.value
+    })
   },
 
   /**

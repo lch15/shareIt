@@ -1,4 +1,26 @@
 /* pages/inbox/inbox.wxss */
+.choose{
+   font-size: 75rpx;
+   font-weight: 100;
+   font-family:  '宋体';
+ color: #b8b2b2;
+ margin-left:0 rpx;
+ margin-top: 0rpx;
+}
+/*头部整体样式*/
+.topContainsView{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ margin-bottom: 3px;
+
+}
+ .topRightView{
+ margin-left: 15rpx;
+ display: flex;
+ flex-direction: column;
+  margin-right: 250rpx;
+}
 .bottomView{
  display: flex;
  flex-direction: row;
@@ -13,7 +35,7 @@
  justify-content: center;
  margin-top: 0rpx;
  padding-left: 0rpx;
- padding-right: 10rpx;
+ padding-right: 0rpx;
 }
 .bottomItemView2{
  display: flex;
@@ -27,9 +49,9 @@
 /*Item样式中的图标样式 顶 踩 分享 评论*/
 .bottomItemImage{
   margin-right: 0px;
-  margin-left: 45rpx;
- width: 40rpx;
- height: 40rpx;
+  margin-left: 250rpx;
+ width: 60rpx;
+ height: 60rpx;
 }
 /*Item中的文字样式 顶 踩 分享 评论*/
 .bottomItemText{

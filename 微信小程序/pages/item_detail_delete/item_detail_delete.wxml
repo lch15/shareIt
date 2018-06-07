@@ -1,2 +1,42 @@
-<!--pages/item_detail_delete/item_detail_delete.wxml-->
-<text>pages/item_detail_delete/item_detail_delete.wxml</text>
+<!--pages/item_detail/item_detail.wxml-->
+
+
+
+    <view class="book-meta">
+        <view class="meta-info">
+
+        <view>  
+        <text class="book-title">圣诞节覅</text>
+        <text><image class="profileImage" src="/image/my.png" /></text>
+        </view>
+           
+            <text class="other-meta">文章id：</text>
+            <text class="other-meta">发布者：</text>
+            <text class="other-meta">发布时间：</text>
+          
+        </view>      
+        
+    </view>
+      
+    <!--<view class="book-intro" >
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">dfsgjbfaeiug</text>
+    </view>-->
+
+    <view class="book-intro">
+        <view class="intro-header"><text>正文</text></view>
+        <text class="intro-content">暗房东是个鸡肋若不能批塞茹不发的v了世界杯verb那里空间分布任何外部框架以及插件基本上无法使用，就算原生的 js 插件也很难使用，因为以前我们的 js 插件也基本上全部是一操作 dom 的形式存在，而微信应用号此次的架构是不允许操作任何 dom，就连以前我们习惯使用的动态设置的rem.js也是不支持的。
+暗房东是个鸡肋若不能批塞茹不发的v了世界杯verb那里空间分布任何外部框架以及插件基本上无法使用，就算原生的 js 插件也很难使用，因为以前我们的 js 插件也基本上全部是一操作 dom 的形式存在，而微信应用号此次的架构是不允许操作任何
+此次微信还提供了 WebSocket，就可以直接利用它做聊天，可以开发的空间非常大。</text>
+    </view>
+
+    <view class="buttonview">
+    <button ><image class="profileImage" src="/image/share_icon.png" /></button>
+     </view>
+    <view class="buttonview2">
+    <button ><image class="profileImage" src="/image/delete_icon.png" /></button>
+     </view>
+   
+
+
+
