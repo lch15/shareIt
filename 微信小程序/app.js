@@ -21,6 +21,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              console.log(res.userInfo)
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -29,6 +30,22 @@ App({
             }
           })
         }
+      }
+    })
+
+    wx.request({
+      url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
+      data: {
+        user_name: this.globalData.userInfo.nickName,
+        encryptedData: this.globalData.userInfo.encryptedData,
+        avatarUrl: this.globalData.userInfo.avatarUrl
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        this.globalData.useropenid=res.data.openid
       }
     })
   },
