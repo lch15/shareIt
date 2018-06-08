@@ -1,7 +1,10 @@
 {
   "pages": [
+
     "pages/index/index",
     "pages/search/search",
+
+
     "pages/newshare/newshare",
   "pages/item_detail_outbox/item_detail_outbox",
     "pages/outbox/outbox",
@@ -14,7 +17,7 @@
     
    
     "pages/logs/logs",
-   
+
     "pages/item_detail/item_detail"
   ],
   "window": {

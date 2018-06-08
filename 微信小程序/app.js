@@ -51,20 +51,9 @@ App({
                 this.userInfoReadyCallback(res)
                 
               }
-            },
-            fail: function (res){
-            console.log(1)
-            console.log(res)
-          }
+            }
           })
         }
-      },
-      fail: function(res) {
-                      console.log(1)
-        console.log(res)
-      },
-      complete:function(res){
-        console.log(this.Data.userInfo)
       }
     })
 
@@ -72,5 +61,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    useropenid:null  }
+    useropenid:null
+  }
 })
