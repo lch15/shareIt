@@ -1,17 +1,25 @@
-// pages/search/test.js
+// pages/searchresultshow/searchresultshow.js
 var Data = require('../search_user/search_user_result.js')  
-Page({
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
     showData: Data.myData().list,  
+    casArray: ['userid', 'articleid'],
+    casIndex:0
+         },
+  
+  bindCasPickerChange: function (e) {   
+    this.setData({
+      casIndex: e.detail.value
+    })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function (options) {
   
   },

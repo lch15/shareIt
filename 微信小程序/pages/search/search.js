@@ -63,6 +63,9 @@ Page({
     // 页面关闭
   },
   searchid:function(){
+    wx.navigateTo({
+      url: '../search_articleid/search_articleid',
+    })
     var that=this
     if (that.data.keywords==null||that.data.keywords.replace(/\s+/g, '').length==0)
       this.data.validation = '输入不能为空'

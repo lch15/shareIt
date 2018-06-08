@@ -1,35 +1,32 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/search/search",
     "pages/newshare/newshare",
   "pages/item_detail_outbox/item_detail_outbox",
     "pages/outbox/outbox",
       "pages/inbox/inbox",
-    "pages/search/search",
-    "pages/edit/edit",
- 
+    "pages/edit/edit", 
     "pages/item_detail_delete/item_detail_delete",
-  "pages/search_user/search_user",
+  "pages/search_user/search_user",       
     
-    "pages/search_user/test",     
-   
-    
-    
+    "pages/search_articleid/search_articleid",
     
    
     "pages/logs/logs",
-    "pages/index/index",
+   
     "pages/item_detail/item_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#008B8B",
     "navigationBarTitleText": "ShareIt",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "disableScroll":false
   },
   "tabBar": {
     "position":"bottom",
-    "list": [
-     
+    "list": [     
       {
        "pagePath": "pages/search/search",
        "selectedColor": "#32aa9e",

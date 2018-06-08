@@ -7,10 +7,25 @@ page {
  width: 100%;
  height: 3rpx;
 }
-.profileImage{
-  margin-right: 230rpx;
- width: 0rpx;
- height: 60rpx;
+.profileImage1{
+  margin-top: 8rpx;
+  margin-right: 15rpx;
+ width: 78rpx;
+ height: 78rpx;
+ border-radius: 30rpx;
+}
+.profileImage2{
+  margin-top: 15rpx;
+  margin-right: 25rpx;
+ width: 68rpx;
+ height: 68rpx;
+ border-radius: 30rpx;
+}
+.profileImage3{
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+ width: 60rpx;
+ height: 63rpx;
  border-radius: 30rpx;
 }
 .buttonview{
@@ -19,6 +34,13 @@ page {
    height: 90rpx;
    bottom: 0;
    width:33.3333%;
+}
+.book-meta {
+    position: relative;
+    padding: 20rpx;
+    overflow: hidden;
+    margin-right: 0rpx;
+    margin-left: 20rpx
 }
 .buttonview button{
 border:none;
@@ -83,6 +105,7 @@ margin-top: 15px;
     padding-top: 10rpx;
     color: #888;
     font-size: 30rpx;
+   
 }
 .profileImageleft{
   margin-top: 18rpx;

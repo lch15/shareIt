@@ -56,7 +56,6 @@ App({
    
   },
   globalData: {
-    userInfo: [],
-    useropenid:'lch1237666'
-  }
+    userInfo: null,
+    useropenid:null  }
 })

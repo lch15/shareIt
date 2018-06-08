@@ -6,6 +6,7 @@ Page({
    */
   data: {
   loginfo:'d'
+
   },
 
   /**

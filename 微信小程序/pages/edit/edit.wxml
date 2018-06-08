@@ -1,2 +1,60 @@
 <!--pages/edit/edit.wxml-->
-<text>pages/edit/edit.wxml</text>
+    <view class="book-meta">    
+        <view class="meta-info">
+        <view class="titleview">  
+        <textarea placeholder="标题"></textarea>
+        </view>
+        <view>
+        <text><image class="profileImage" src="/image/my.png" /></text>
+        </view>
+           <view class="divLine"></view>        
+        </view>              
+    </view>
+      
+    <!--<view class="book-intro" >
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">dfsgjbfaeiug</text>
+    </view>-->
+
+    <view class="book-meta">
+       
+        <textarea style='height:450px' placeholder="正文" maxlength='5000'>
+        
+        </textarea>
+
+    </view>
+<view class="divLine"></view>
+ 
+
+
+
+    <view >
+    <text class="other-meta">  </text>
+    </view>
+    
+    <view >
+    <text class="other-meta">  </text>
+    </view>
+ <view class="buttonview">
+    <button bindtap="click_edit" ><image class="profileImage1" src="/image/addpic_icon.png"></image></button>
+     </view>
+    <view class="buttonview1">
+    <button ><image class="profileImage2" src="/image/addfile_icon.png"></image></button>
+     </view>
+    <view class="buttonview2">
+    <button ><image class="profileImage3" src="/image/confirm_icon.png"></image></button>
+     </view>
+     
+   
+<!--
+  <view class="buttonviewout">
+    <button bindtap="click_edit" class="buttonviewfix"><text class="bottomItenText">确定</text></button>
+     </view>-->
+     
+   
+
+
+
+
+
+

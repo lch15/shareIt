@@ -2,7 +2,7 @@
 
 
 
-<textarea class="aa">
+
     <view class="book-meta">    
         <view class="meta-info">
         <view class="titleview">  
@@ -20,9 +20,9 @@
         <text class="intro-content">dfsgjbfaeiug</text>
     </view>-->
 
-    <view class="book-intro">
+    <view class="book-meta">
        
-        <textarea placeholder="正文">
+        <textarea style='height:450px' placeholder="正文" maxlength='5000'>
         
         </textarea>
 
@@ -40,16 +40,16 @@
     <text class="other-meta">  </text>
     </view>
  <view class="buttonview">
-    <button bindtap="click_edit" plain="true"  ><image src="/image/delete_icon.png"></image></button>
+    <button bindtap="click_edit" ><image class="profileImage1" src="/image/addpic_icon.png"></image></button>
      </view>
     <view class="buttonview1">
-    <button >添加附件</button>
+    <button ><image class="profileImage2" src="/image/addfile_icon.png"></image></button>
      </view>
     <view class="buttonview2">
-    <button >确认</button>
+    <button ><image class="profileImage3" src="/image/confirm_icon.png"></image></button>
      </view>
      
-     </textarea>
+   
 <!--
   <view class="buttonviewout">
     <button bindtap="click_edit" class="buttonviewfix"><text class="bottomItenText">确定</text></button>

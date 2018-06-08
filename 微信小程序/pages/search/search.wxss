@@ -3,18 +3,18 @@
    margin:50px 80px 0px 40px;
 }
 #a{
-  margin:20px 80px 15px 60px;
-  border:  1px solid red;
-  border-color: grey;
-  border-radius: 40px
+  margin:20px 80px 15px 72px;
+  border:  1rpx solid red;
+  border-color: gainsboro;
+  height: 70rpx;
 }
 #b1{
   margin:0px 10px 0px 75px;
-   border:  1px solid red;
-   border-color: grey;
+   border:  1rpx;
+   border-color: gainsboro;
 }
 #b2{
   margin:0px 0px 0px 0px;
-  border:  1px solid red;
-  border-color: grey;
+  border:  1rpx ;
+  border-color:gainsboro;
 }

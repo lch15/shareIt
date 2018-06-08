@@ -19,3 +19,14 @@
 .usermotto {
   margin-top: 200px;
 }
+.in{
+  margin:20px 10px 0px 15px;
+   border:  1rpx;
+   border-color: gainsboro;
+}
+.start {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
