@@ -13,10 +13,12 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         this.data.code=res.code
+        console.log(res.code)
       }
     })
     // 获取用户信息
     wx.getSetting({
+
       success: res => {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
@@ -30,7 +32,9 @@ App({
                 data: {
                   nickname: this.globalData.userInfo.nickName,
                   js_code: this.data.code,
-                  avatarUrl: this.globalData.userInfo.avatarUrl
+                  avatarUrl: this.globalData.userInfo.avatarUrl,
+                  iv: this.globalData.userInfo.iv,
+                  encryptedData: this.globalData.userInfo.encryptedData
                 },
                 method: 'POST',
                 header: {
@@ -47,9 +51,20 @@ App({
                 this.userInfoReadyCallback(res)
                 
               }
-            }
+            },
+            fail: function (res){
+            console.log(1)
+            console.log(res)
+          }
           })
         }
+      },
+      fail: function(res) {
+                      console.log(1)
+        console.log(res)
+      },
+      complete:function(res){
+        console.log(this.Data.userInfo)
       }
     })
 
