@@ -1,17 +1,47 @@
-<!--pages/newshare/newshare.wxml-->
-<view class="section1">
-  <textarea class="head" bindblur="bindTextAreaBlur" auto-focus auto-height placeholder="标题：" />
-</view>
-<view class="section2">
-  <button class="add" bindtap='accessory'>附件</button>
-</view>
-<view class="section3">
-  <textarea placeholder="正文："/>
-</view>
-<view class="section4">   
-    <button id="b1" bindtap="seachid" size="mini">预览</button>
-    <button id="b2" bindtap="searchpersonid" size="mini">发送</button>
-  </view>
- 
+<!--pages/item_detail/item_detail.wxml-->
+
+
+<view class="divLine"></view>
+    <view class="book-meta">
+        <view class="meta-info">
+
+        <view class="titleview">  
+        <textarea placeholder="标题"></textarea>
+        </view>
+        <view>
+        <text><image class="profileImage" src="/image/my.png" /></text>
+        </view>
+           <view class="divLine"></view>        
+        </view>      
+        
+    </view>
+      
+    <!--<view class="book-intro" >
+        <view class="intro-header"><text>简介</text></view>
+        <text class="intro-content">dfsgjbfaeiug</text>
+    </view>-->
+
+    <view class="book-intro">
+       
+        <textarea placeholder="正文"></textarea>
+
+    </view>
+<view class="divLine"></view>
+    <view >
+    <text class="other-meta">  </text>
+    </view>
+    
+    <view >
+    <text class="other-meta">  </text>
+    </view>
+
+  <view class="buttonviewout">
+    <button bindtap="click_edit" class="buttonview"><text class="bottomItenText">确定</text></button>
+     </view>
+     
+   
+
+
+
 
 

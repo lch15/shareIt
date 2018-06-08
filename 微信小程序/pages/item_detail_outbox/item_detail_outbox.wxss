@@ -2,12 +2,6 @@
 page {
     background: white;
 }
-.divLine{
- background: #f3f3f3;
- width: 100%;
- height: 3rpx;
-}
-
 .topContainsView{
  display: flex;
  flex-direction: row;
@@ -48,11 +42,8 @@ margin-top: 15px;
    position: fixed;
    height: 90rpx;
    bottom: 0;
-   width:100%;
-   color: white;
-   background-color: 	#388E8E;
+   width:33.3333%;
 }
-
 .buttonview1{
    margin:0px 0px 0px 33.3333%;  
    position: fixed;
