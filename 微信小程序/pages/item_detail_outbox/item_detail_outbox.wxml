@@ -52,10 +52,16 @@
     <text class="other-meta">  </text>
     </view>
 
-    <view class="buttonview">
+  <view class="buttonview">
+    <button bindtap="click_edit"><image class="profileImage" src="/image/edit_icon.png" /></button>
+     </view>
+    <view class="buttonview1">
     <button ><image class="profileImage" src="/image/share_icon.png" /></button>
      </view>
-
+    <view class="buttonview2">
+    <button ><image class="profileImage" src="/image/delete_icon.png" /></button>
+     </view>
+    
    
 
 

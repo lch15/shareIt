@@ -8,8 +8,13 @@ Page({
    */
   data: {
 
-  searchresult:[]
-
+  searchresult:[],
+  casArray: ['编辑', '分享','删除'],
+  },
+  bindCasPickerChange: function (e) {
+    this.setData({
+      casIndex: e.detail.value
+    })
   },
 
   /**
