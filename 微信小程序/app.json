@@ -1,11 +1,12 @@
 {
   "pages": [
     
-      "pages/item_detail_delete/item_detail_delete",
-      "pages/inbox/inbox",
+    
     "pages/search/search",
+    "pages/item_detail_delete/item_detail_delete",
   "pages/outbox/outbox",
-  
+   
+    "pages/inbox/inbox",
  
     
     "pages/search_user/test",     

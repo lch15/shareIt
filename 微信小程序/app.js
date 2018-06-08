@@ -1,15 +1,18 @@
 //app.js
 App({
+  data:{
+    code:''
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        this.data.code=res.code
       }
     })
     // 获取用户信息
@@ -22,10 +25,27 @@ App({
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
               console.log(res.userInfo)
+              wx.request({
+                url: 'https://www.yhmeng.top/insert_user', //仅为示例，并非真实的接口地址
+                data: {
+                  nickname: this.globalData.userInfo.nickName,
+                  js_code: this.data.code,
+                  avatarUrl: this.globalData.userInfo.avatarUrl
+                },
+                method: 'POST',
+                header: {
+                  'content-type': 'application/json' // 默认值
+                },
+                success: function (res) {
+                  this.globalData.useropenid = res.data.open_id
+                  console.log(res)
+                }
+              })
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
+                
               }
             }
           })
@@ -33,24 +53,10 @@ App({
       }
     })
 
-    wx.request({
-      url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
-      data: {
-        user_name: this.globalData.userInfo.nickName,
-        encryptedData: this.globalData.userInfo.encryptedData,
-        avatarUrl: this.globalData.userInfo.avatarUrl
-      },
-      method: 'POST',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        this.globalData.useropenid=res.data.openid
-      }
-    })
+   
   },
   globalData: {
-    userInfo: null,
+    userInfo: [],
     useropenid:'lch1237666'
   }
 })

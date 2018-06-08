@@ -53,10 +53,10 @@
     </view>
 
     <view class="buttonview">
-    <button ><image class="profileImage" src="/image/share_icon.png" /></button>
+    <button bindtap='share2other'><image class="profileImage" src="/image/share_icon.png" /></button>
      </view>
     <view class="buttonview2">
-    <button ><image class="profileImage" src="/image/delete_icon.png" /></button>
+    <button bindtap='delete'><image class="profileImage" src="/image/delete_icon.png" /></button>
      </view>
    
 

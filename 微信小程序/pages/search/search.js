@@ -98,7 +98,7 @@ Page({
       wx.request({
         url: 'https://www.yhmeng.top/search_user', //仅为示例，并非真实的接口地址
         data: {
-          author_id: app.globalData.useropenid
+          author_id: that.data.keywords
         },
         method: "POST",
         header: {

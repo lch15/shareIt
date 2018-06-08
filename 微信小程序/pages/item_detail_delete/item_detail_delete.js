@@ -5,14 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+  title:'',
+  id:'',
+  author:'',
+  content:'',
+  avatarUrl:'',
+  create_time:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
+    wx.request({
+      url: 'https://www.yhmeng.top/get_article ', //仅为示例，并非真实的接口地址
+      data: {
+        article_id: options.id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        var that = this
+        that.setData({
+          title:options.title,
+          id:options.id,
+          author:options.author,
+          content:res.result,
+          avatarUrl:options.head,
+          create_time:options.create_time
+        });
+      }
+    })
+    
   },
 
   /**

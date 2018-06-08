@@ -15,6 +15,7 @@ Page({
     this.setData({
       casIndex: e.detail.value
     })
+    console.log(e.target.id)
   },
 
   /**
