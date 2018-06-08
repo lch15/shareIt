@@ -9,13 +9,31 @@ Page({
   data: { 
      
  searchresult:[],
- casArray: ['分享', '删除'],
+ casArray: ['删除'],
   },
   bindCasPickerChange: function (e) {
     this.setData({
       casIndex: e.detail.value
     })
-    console.log(e.target.id)
+    var item = this.data.searchresult[e.target.id]
+    if (e.detail.value == 0 && app.deletebyid(item.id))
+    {
+      wx.request({
+        url: 'https://www.yhmeng.top/inbox_list', //仅为示例，并非真实的接口地址
+        data: {
+          user_id: app.globalData.useropenid
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          this.setData({
+            searchresult: res.data.result
+          });
+        }
+      })
+    }
   },
 
   /**
@@ -33,6 +51,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+        console.log(res.data.result)
         that.setData({
           searchresult: res.data.result
         });
@@ -101,7 +120,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+     
+    }
   }
 })

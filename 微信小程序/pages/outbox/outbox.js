@@ -9,12 +9,34 @@ Page({
   data: {
 
   searchresult:[],
-  casArray: ['编辑', '分享','删除'],
+  casArray: ['编辑','删除'],
   },
   bindCasPickerChange: function (e) {
     this.setData({
       casIndex: e.detail.value
     })
+    if (e.detail.value == 1 && app.deletebyid(item.id)) {
+      wx.request({
+        url: 'https://www.yhmeng.top/inbox_list', //仅为示例，并非真实的接口地址
+        data: {
+          user_id: app.globalData.useropenid
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          this.setData({
+            searchresult: res.data.result
+          });
+        }
+      })
+    }
+    else if (e.detail.value == 0){
+      wx.navigateTo({
+        url: '/pages/item_detail_outbox/item_detail_outbox?id='+item.id+'&head='+item.head+'&title='+item.title+'&create_time='+item.create_time+'&author='+item.author,
+      })
+    }
   },
 
   /**

@@ -17,7 +17,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    that.setData({
+      title: options.title,
+      id: options.id,
+      author: options.author,
+      avatarUrl: options.head,
+      create_time: options.create_time
+    });
     wx.request({
       url: 'https://www.yhmeng.top/get_article ', //仅为示例，并非真实的接口地址
       data: {
@@ -28,15 +35,11 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        var that = this
-        that.setData({
-          title:options.title,
-          id:options.id,
-          author:options.author,
+        console.log(res)       
+        that.setData({        
           content:res.result,
-          avatarUrl:options.head,
-          create_time:options.create_time
         });
+        console.log(that.data)
       }
     })
     
@@ -88,6 +91,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   }
+ 
 })
