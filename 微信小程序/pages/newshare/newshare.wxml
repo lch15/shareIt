@@ -1,10 +1,10 @@
 <!--pages/item_detail/item_detail.wxml-->
 
 
-<view class="divLine"></view>
-    <view class="book-meta">
-        <view class="meta-info">
 
+<textarea class="aa">
+    <view class="book-meta">    
+        <view class="meta-info">
         <view class="titleview">  
         <textarea placeholder="标题"></textarea>
         </view>
@@ -12,8 +12,7 @@
         <text><image class="profileImage" src="/image/my.png" /></text>
         </view>
            <view class="divLine"></view>        
-        </view>      
-        
+        </view>              
     </view>
       
     <!--<view class="book-intro" >
@@ -23,10 +22,16 @@
 
     <view class="book-intro">
        
-        <textarea placeholder="正文"></textarea>
+        <textarea placeholder="正文">
+        
+        </textarea>
 
     </view>
 <view class="divLine"></view>
+ 
+
+
+
     <view >
     <text class="other-meta">  </text>
     </view>
@@ -34,10 +39,21 @@
     <view >
     <text class="other-meta">  </text>
     </view>
-
-  <view class="buttonviewout">
-    <button bindtap="click_edit" class="buttonview"><text class="bottomItenText">确定</text></button>
+ <view class="buttonview">
+    <button bindtap="click_edit" plain="true"  ><image src="/image/delete_icon.png"></image></button>
      </view>
+    <view class="buttonview1">
+    <button >添加附件</button>
+     </view>
+    <view class="buttonview2">
+    <button >确认</button>
+     </view>
+     
+     </textarea>
+<!--
+  <view class="buttonviewout">
+    <button bindtap="click_edit" class="buttonviewfix"><text class="bottomItenText">确定</text></button>
+     </view>-->
      
    
 
