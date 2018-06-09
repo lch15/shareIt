@@ -1,20 +1,36 @@
 /* pages/search/search.wxss */
 .logo{
-   margin:50px 80px 0px 40px;
+  margin:40px 0px 20px 0px;
+  display: flex;  
+  flex-direction: row;  
+  justify-content: center; 
 }
 #a{
-  margin:20px 80px 15px 72px;
-  border:  1rpx solid red;
+  margin:20px 100px 20px 85px;
+  border:  2rpx solid red;
   border-color: gainsboro;
+  box-shadow: 1rpx 1rpx 1rpx 1rpx;
   height: 70rpx;
+  border-radius: 3%;
+  width:400rpx;
+  display: flex;  
+  flex-direction: row;  
+  justify-content: center; 
 }
 #b1{
-  margin:0px 10px 0px 75px;
+  margin:5px 0px 10px 85px;
    border:  1rpx;
-   border-color: gainsboro;
+   border-color: #008B8B;
+   background-color: #008B8B;
+   color: white;
+   height: 70rpx;
+   width: 400rpx;
 }
 #b2{
-  margin:0px 0px 0px 0px;
+  margin:0px 0px 0px 85px;
   border:  1rpx ;
-  border-color:gainsboro;
+  background-color: #008B8B;
+   color: white;
+   height: 70rpx;
+   width: 400rpx;
 }

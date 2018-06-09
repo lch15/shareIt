@@ -48,11 +48,6 @@ Page({
       avatarUrl: options.head,
       create_time: options.create_time
     });
-    if (options.content) {
-      that.setData({
-        content: options.content
-      })
-    }else{
     wx.request({
       url: 'https://www.yhmeng.top/get_article', //仅为示例，并非真实的接口地址
       data: {
@@ -69,7 +64,7 @@ Page({
         });
       }
     })
-    }
+
   },
 
   /**

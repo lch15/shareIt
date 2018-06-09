@@ -1,10 +1,11 @@
 {
   "pages": [
+
     "pages/newshare/newshare",
     "pages/firstpage/firstpage",
     "pages/index/index",
     "pages/search/search",
-    
+  "pages/appendix/appendix",
   "pages/item_detail_outbox/item_detail_outbox",
     "pages/outbox/outbox",
       "pages/inbox/inbox",
@@ -14,7 +15,7 @@
     
     "pages/search_articleid/search_articleid",
     
-   
+   "pages/item_detail_newshare/item_detail_newshare",
     "pages/logs/logs",
    
     "pages/item_detail/item_detail"

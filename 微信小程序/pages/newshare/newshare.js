@@ -10,6 +10,16 @@ Page({
   title:'',
   content:''
   },
+  gettitle:function(e){
+    this.setData({
+      title:e.detail.value
+    })
+  },
+  getcontent:function(e){
+    this.setData({
+      content:e.detail.value
+    })
+  },
   addpic: function (e){
     wx.chooseImage({
       count: 9, // 默认9
@@ -24,6 +34,7 @@ Page({
   submit:function(e){
     var that = this
     wx.request({
+
       url: 'https://www.yhmeng.top/create_article', //仅为示例，并非真实的接口地址
       data: {
         author_id: app.globalData.useropenid,
@@ -36,7 +47,10 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log('success')
+        console.log()
+        wx.navigateTo({
+          url: '/pages/item_detail_outbox/item_detail_outbox?id=' + res.data.result + '&head=' + app.globalData.userInfo.avatarUrl + '&title=' + that.data.title + '&create_time=' + " " + '&author=' + app.globalData.userInfo.nickName+'&content='+that.data.content,
+        })
       }
     })
   },
