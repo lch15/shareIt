@@ -15,9 +15,12 @@ Page({
     this.setData({
       casIndex: e.detail.value
     })
-    if (e.detail.value == 1 && app.deletebyid(item.id)) {
+    var item = this.data.searchresult[e.target.id]
+    if (e.detail.value == 1 ) {
+      var that=this
+      app.deletebyid(item.id) 
       wx.request({
-        url: 'https://www.yhmeng.top/inbox_list', //仅为示例，并非真实的接口地址
+        url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
         data: {
           user_id: app.globalData.useropenid
         },
@@ -26,7 +29,7 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          this.setData({
+          that.setData({
             searchresult: res.data.result
           });
         }
@@ -44,6 +47,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this
+    console.log(app.globalData.useropenid)
     wx.request({
       url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
       data: {
@@ -93,6 +97,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    wx.stopPullDownRefresh()
     var that = this
     wx.request({
       url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
@@ -122,6 +127,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: 'ShareIt 分享你的idear',
+      path: 'pages/newshare/newshare',
+      imageUrl: '../../image/icon.png'
+    }
   }
 })

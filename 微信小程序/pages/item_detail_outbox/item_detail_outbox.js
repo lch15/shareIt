@@ -6,18 +6,65 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    title: '',
+    id: '',
+    author: '',
+    content: '',
+    avatarUrl: '',
+    create_time: ''
+  },
+  deletethis:function(e){
+    var that = this
+    wx.request({
+      url: 'https://www.yhmeng.top/delete_article', //仅为示例，并非真实的接口地址
+      data: {
+        article_id: that.data.id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+      }
+    })
+    wx.reLaunch({
+      url: '/pages/outbox/outbox'
+    })
   },
   click_edit: function () {
     wx.navigateTo({
-      url: '../edit/edit',
+      url: '../edit/edit?title='+this.data.title+'&content='+this.data.content+'&id='+this.data.id
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    that.setData({
+      title: options.title,
+      id: options.id,
+      author: options.author,
+      avatarUrl: options.head,
+      create_time: options.create_time
+    });
+    wx.request({
+      url: 'https://www.yhmeng.top/get_article', //仅为示例，并非真实的接口地址
+      data: {
+        article_id: options.id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.result)
+        that.setData({
+          content: res.data.result
+        });
+      }
+    })
+
   },
 
   /**
@@ -66,6 +113,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return{
+      
+      path: '/pages/item_detail/item_detail?id=' + this.data.id + '&head=' + this.data.head + '&title=' + this.data.title + '&create_time=' + this.data.create_time + '&author=' + this.data.author
+    }
   }
 })

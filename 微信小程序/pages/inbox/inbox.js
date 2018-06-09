@@ -16,8 +16,22 @@ Page({
       casIndex: e.detail.value
     })
     var item = this.data.searchresult[e.target.id]
-    if (e.detail.value == 0 && app.deletebyid(item.id))
+    if (e.detail.value == 0 )
     {
+      var that=this
+      wx.request({
+        url: 'https://www.yhmeng.top/share_article_delete', //仅为示例，并非真实的接口地址
+        data: {
+          user_id: app.globalData.useropenid,
+          article_id:item.id
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+        }
+      })
       wx.request({
         url: 'https://www.yhmeng.top/inbox_list', //仅为示例，并非真实的接口地址
         data: {
@@ -28,7 +42,7 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          this.setData({
+          that.setData({
             searchresult: res.data.result
           });
         }
@@ -91,6 +105,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    wx.stopPullDownRefresh()
     var that = this
     wx.request({
       url: 'https://www.yhmeng.top/inbox_list', //仅为示例，并非真实的接口地址
@@ -121,12 +136,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      console.log(res.target)
-    }
-    return {
-     
+    return{
+      title:'ShareIt 分享你的idear',
+      path:'pages/newshare/newshare',
+      imageUrl:'../../image/icon.png'
     }
   }
 })

@@ -1,7 +1,22 @@
 //app.js
 App({
   data:{
-    code:''
+    
+  },
+  deletebyid:function(id){
+    wx.request({
+      url: 'https://www.yhmeng.top/delete_article', //仅为示例，并非真实的接口地址
+      data: {
+        article_id: id
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        return true
+      }
+    })
   },
   onLaunch: function () {
     // 展示本地存储能力
@@ -12,8 +27,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        this.data.code=res.code
-        console.log(res.code)
+        this.globalData.code=res.code
       }
     })
     // 获取用户信息
@@ -21,6 +35,7 @@ App({
 
       success: res => {
         if (res.authSetting['scope.userInfo']) {
+          var that=this
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -31,26 +46,28 @@ App({
                 url: 'https://www.yhmeng.top/insert_user', //仅为示例，并非真实的接口地址
                 data: {
                   nickname: this.globalData.userInfo.nickName,
-                  js_code: this.data.code,
+                  js_code: this.globalData.code,
                   avatarUrl: this.globalData.userInfo.avatarUrl,
-                  iv: this.globalData.userInfo.iv,
-                  encryptedData: this.globalData.userInfo.encryptedData
                 },
                 method: 'POST',
                 header: {
                   'content-type': 'application/json' // 默认值
                 },
                 success: function (res) {
-                  this.globalData.useropenid = res.data.open_id
-                  console.log(res)
+                  that.globalData.useropenid = res.data.result.open_id
+                  
                 }
               })
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
-                
+                wx.switchTab({
+                  url: '/pages/newshare/newshare'
+                })
               }
+             
+              console.log(111111)
             }
           })
         }
@@ -61,6 +78,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    useropenid:null
+    useropenid:null,
+    code: ''
   }
 })

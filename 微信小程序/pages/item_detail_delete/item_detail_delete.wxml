@@ -13,9 +13,9 @@
 <view class="topContainsView">
     <image class="profileImage" src="{{avatarUrl}}" /><!--头像-->
     <view class="topRightView">
-      <text class="topRightName">{{author}}</text>     
+      <text class="topRightName">作者：{{author}}</text>     
       <view class="bottomItemView">
-      <text class="bottomItemText"> {{id}}</text>  
+      <text class="bottomItemText"> 文章id：{{id}}</text>  
       </view> 
     </view>
     </view>
@@ -49,10 +49,10 @@
     </view>
 
     <view class="buttonview">
-    <button bindtap='share2other'><image class="profileImage" src="/image/share_icon.png" /></button>
+    <button open-type='share'><image class="profileImage" src="/image/share_icon.png" /></button>
      </view>
     <view class="buttonview2">
-    <button bindtap='delete'><image class="profileImage" src="/image/delete_icon.png" /></button>
+    <button bindtap='deletethis'><image class="profileImage" src="/image/delete_icon.png" /></button>
      </view>
    
 

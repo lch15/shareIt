@@ -16,12 +16,12 @@
       <text class="bottomItemText"> {{item.create_time}}</text> 
       </view> 
     </view>
-      <picker bindchange="bindCasPickerChange" value="" range="{{casArray}}">    
+      <picker id='{{index}}' bindchange="bindCasPickerChange" value="" range="{{casArray}}">    
        <text class="choose"> ˇ</text>
       </picker>
    </view>
    <!-- 中间内容 -->
-    <navigator url="/pages/item_detail_outbox/item_detail_outbox"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息--> 
+    <navigator url="/pages/item_detail_outbox/item_detail_outbox?id={{item.id}}&head={{item.head}}&title={{item.title}}&create_time={{item.create_time}}&author={{item.author}}"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息--> 
  <text class="centerContent">{{item.title}}</text>
  </navigator>
   

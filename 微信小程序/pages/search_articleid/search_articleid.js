@@ -8,7 +8,8 @@ Page({
   data: {
     showData: Data.myData().list,  
     casArray: ['userid', 'articleid'],
-    casIndex:0
+    casIndex:0,
+    showData:[]
          },
   
   bindCasPickerChange: function (e) {   
@@ -21,7 +22,24 @@ Page({
    */
 
   onLoad: function (options) {
-  
+    var that=this
+    wx.request({
+      url: 'https://www.yhmeng.top/search_article', //仅为示例，并非真实的接口地址
+      data: {
+        article_id: options.keywords
+      },
+      method: "POST",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+
+        that.setData({
+          showData: res.data.result
+        });
+
+      }
+    })
   },
 
   /**

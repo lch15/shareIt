@@ -21,9 +21,11 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
+
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
@@ -41,6 +43,7 @@ Page({
           })
         }
       })
+
     }
   },
   getUserInfo: function(e) {
@@ -48,6 +51,25 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+    wx.request({
+      url: 'https://www.yhmeng.top/insert_user', //仅为示例，并非真实的接口地址
+      data: {
+        nickname: this.globalData.userInfo.nickName,
+        js_code: this.globalData.code,
+        avatarUrl: this.globalData.userInfo.avatarUrl,
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        this.globalData.useropenid = res.data.open_id
+        console.log(res)
+      }
+    })
+    wx.switchTab({
+      url: '/pages/newshare/newshare'
     })
   }
 })
