@@ -2,7 +2,7 @@
     <view class="book-meta">    
         <view class="meta-info">
         <view class="titleview">  
-        <textarea placeholder="标题">{{title}}</textarea>
+        <textarea bindinput='gettitle' placeholder="标题">{{title}}</textarea>
         </view>
         <view>
         <text><image class="profileImage" src="/image/my.png" /></text>
@@ -18,7 +18,7 @@
 
     <view class="book-meta">
        
-        <textarea style='height:450px' placeholder="正文" maxlength='5000'>
+        <textarea style='height:450px' placeholder="正文" maxlength='5000' bindinput='getcontent'>
         {{content}}
         </textarea>
 
@@ -35,12 +35,7 @@
     <view >
     <text class="other-meta">  </text>
     </view>
- <view class="buttonview">
-    <button bindtap="click_edit" ><image class="profileImage1" src="/image/addpic_icon.png"></image></button>
-     </view>
-    <view class="buttonview1">
-    <button ><image class="profileImage2" src="/image/addfile_icon.png"></image></button>
-     </view>
+
     <view class="buttonview2">
     <button bindtap="submit"><image class="profileImage3" src="/image/confirm_icon.png"></image></button>
      </view>

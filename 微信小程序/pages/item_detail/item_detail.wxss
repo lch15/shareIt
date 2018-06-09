@@ -42,7 +42,14 @@ margin-top: 15px;
    position: fixed;
    height: 90rpx;
    bottom: 0;
-   width: 100%;
+   width: 50%;
+}
+.buttonview2{
+   margin:0px 0px 0px 50%;  
+   position: fixed;
+   height: 90rpx;
+   bottom: 0;
+   width: 50%;
 }
 
 .buttontext{

@@ -29,11 +29,11 @@
    <view class="bottomView">
     <view class="bottomItemView">
     
-     <text class="bottomItemText"> 文章id : {{item.id}}</text>
+     <text class="bottomItemText"> 文章编号: {{item.id}}</text>
       <text class="bottomItemText">    </text>
       <text class="bottomItemText">    </text>
-     <text class="bottomItemText">发布时期 : {{item.create_time}}</text>
-     <image class="bottomItemImage" src="../../image/relay.png" />
+     <text class="bottomItemText">发布时间: {{item.create_time}}</text>
+   
 
     </view>
    </view>

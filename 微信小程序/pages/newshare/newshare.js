@@ -10,6 +10,11 @@ Page({
   title:'',
   content:''
   },
+  addappendix:function(e){
+    wx.navigateTo({
+      url: '../appendix/appendix',
+    })
+  },
   gettitle:function(e){
     this.setData({
       title:e.detail.value
@@ -32,6 +37,42 @@ Page({
     })
   },
   submit:function(e){
+    if (this.data.title.replace(/\s+/g, '').length == 0)
+    {
+      {
+       
+        wx.showModal({
+          title: '提示',
+          content: '标题不能为空',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else {
+              console.log('用户点击取消')
+            }
+
+          }
+        })
+      }
+    }
+    else if (this.data.content.replace(/\s+/g, '').length == 0){
+      {
+
+        wx.showModal({
+          title: '提示',
+          content: '内容不能为空',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else {
+              console.log('用户点击取消')
+            }
+
+          }
+        })
+      }
+    }
+    else{
     var that = this
     wx.request({
 
@@ -53,6 +94,7 @@ Page({
         })
       }
     })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

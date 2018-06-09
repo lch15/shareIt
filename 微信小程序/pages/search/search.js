@@ -66,7 +66,19 @@ Page({
   
     var that=this
     if (that.data.keywords==null||that.data.keywords.replace(/\s+/g, '').length==0)
-      this.data.validation = '输入不能为空'
+    {  this.data.validation = '输入不能为空'
+      wx.showModal({
+        title: '提示',
+        content: '输入不能为空',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else {
+            console.log('用户点击取消')
+          }
+
+        }
+      })}
     else {
       this.data.validation = ''
       wx.navigateTo({
@@ -79,7 +91,21 @@ Page({
     
     var that = this
     if (that.data.keywords == null ||that.data.keywords.replace(/\s+/g, '').length == 0)
+    {
       this.data.validation = '输入不能为空'
+      wx.showModal({
+        title: '提示',
+        content: '输入不能为空',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else {
+            console.log('用户点击取消')
+          }
+
+        }
+      })
+    }
     else {
       that.data.validation = ''
       wx.navigateTo({

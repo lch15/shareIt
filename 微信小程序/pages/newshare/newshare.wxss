@@ -48,11 +48,11 @@ padding: 0;
    width:50%;
 }
 .buttonview2{
-   margin:0px 0px 0px 50%;   
+   margin:0px 0px 0px 0%;   
    position: fixed;
    bottom: 0;
    height: 90rpx;
-   width: 50%;
+   width: 100%;
    justify-content: center; 
 }
 .buttontext{

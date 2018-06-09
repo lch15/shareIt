@@ -14,11 +14,6 @@
            <view class="divLine"></view>        
         </view>              
     </view>
-      
-    <!--<view class="book-intro" >
-        <view class="intro-header"><text>简介</text></view>
-        <text class="intro-content">dfsgjbfaeiug</text>
-    </view>-->
 
     <view class="book-meta">
        
@@ -40,19 +35,13 @@
     <text class="other-meta">  </text>
     </view>
  
-    <view class="buttonview1">
-    <button ><image class="profileImage2" src="/image/addfile_icon.png"></image></button>
-     </view>
-    <view class="buttonview2">
+
+    <view class="buttonview2" >
     <button bindtap='submit' ><image class="profileImage3" src="/image/confirm_icon.png"></image></button>
      </view>
      
    
-<!--
-  <view class="buttonviewout">
-    <button bindtap="click_edit" class="buttonviewfix"><text class="bottomItenText">确定</text></button>
-     </view>-->
-     
+
    
 
 

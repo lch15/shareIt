@@ -1,2 +1,2 @@
 <!--pages/appendix/appendix.wxml-->
-<text>pages/appendix/appendix.wxml</text>
+<web-view src='https://www.yhmeng.top/share'></web-view>

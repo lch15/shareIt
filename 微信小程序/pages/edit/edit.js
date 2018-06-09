@@ -1,4 +1,5 @@
 // pages/edit/edit.js
+var app=getApp()
 Page({
 
   /**
@@ -13,8 +14,77 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  gettitle:function(e){
+    this.setData({
+      title:e.detail.value
+    })
+  },
+  getcontent:function(e){
+    this.setData({
+      content: e.detail.value
+    })
+  },
   submit:function(e){
+    var that=this
+    if (this.data.title.replace(/\s+/g, '').length == 0) {
+      {
 
+        wx.showModal({
+          title: '提示',
+          content: '标题不能为空',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else {
+              console.log('用户点击取消')
+            }
+
+          }
+        })
+      }
+    }
+    else if (this.data.content.replace(/\s+/g, '').length == 0) {
+      {
+
+        wx.showModal({
+          title: '提示',
+          content: '内容不能为空',
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else {
+              console.log('用户点击取消')
+            }
+
+          }
+        })
+      }
+    }else{
+      wx.request({
+        url: 'https://www.yhmeng.top/update_article', //仅为示例，并非真实的接口地址
+        data: {
+          article_title: that.data.title,
+          article_id: that.data.id,
+          article_content:that.data.content,
+          author_id:app.globalData.useropenid
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          wx.showToast({
+            title: '更新成功',
+            icon: 'succes',
+            duration: 1000,
+            mask: true
+          })
+          wx.reLaunch({
+            url: '/pages/outbox/outbox',
+          })
+        }
+      })
+    }
   },
   onLoad: function (options) {
   this.setData({
