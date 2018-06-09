@@ -22,19 +22,13 @@ Page({
     })
   },
   submit:function(e){
-   
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
     var that = this
     wx.request({
       url: 'https://www.yhmeng.top/create_article', //仅为示例，并非真实的接口地址
       data: {
         author_id: app.globalData.useropenid,
-        article_title: 55,
-        article_content: 555
+        article_title: that.data.title,
+        article_content: that.data.content
 
       },
       method: "POST",
@@ -43,12 +37,14 @@ Page({
       },
       success: function (res) {
         console.log('success')
-        that.setData({
-          title: app.globalData.useropenid,
-          content: 12345
-        })
       }
     })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+   
   },
 
   /**
