@@ -39,14 +39,12 @@
     <view >
     <text class="other-meta">  </text>
     </view>
- <view class="buttonview">
-    <button bindtap="addpic" ><image class="profileImage1" src="/image/addpic_icon.png"></image></button>
-     </view>
+ 
     <view class="buttonview1">
     <button ><image class="profileImage2" src="/image/addfile_icon.png"></image></button>
      </view>
     <view class="buttonview2">
-    <button bindtap='submit' >va</button>
+    <button bindtap='submit' ><image class="profileImage3" src="/image/confirm_icon.png"></image></button>
      </view>
      
    

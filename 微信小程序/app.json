@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/newshare/newshare",
     "pages/firstpage/firstpage",
     "pages/index/index",
     "pages/search/search",
-    "pages/newshare/newshare",
+    
   "pages/item_detail_outbox/item_detail_outbox",
     "pages/outbox/outbox",
       "pages/inbox/inbox",
