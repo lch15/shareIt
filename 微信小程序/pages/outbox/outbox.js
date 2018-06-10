@@ -46,11 +46,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(options.flag){
+      if(options.flag==1){
+      wx.showToast({
+        title: '更新成功',
+        icon: 'succes',
+        duration: 1000,
+        mask: true
+      })
+      }
+      else if (options.flag == 2) {
+        wx.showToast({
+          title: '发表成功',
+          icon: 'succes',
+          duration: 1000,
+          mask: true
+        })
+      }
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
     this.setData({
       avatarUrl: app.globalData.userInfo.avatarUrl
     })
     var that = this
-    console.log(app.globalData.useropenid)
     wx.request({
       url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
       data: {
@@ -66,20 +96,6 @@ Page({
         });
       }
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
   },
 
   /**

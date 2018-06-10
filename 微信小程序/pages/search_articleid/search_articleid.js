@@ -58,7 +58,7 @@ Page({
       wx.request({
         url: 'https://www.yhmeng.top/search_user', //仅为示例，并非真实的接口地址
         data: {
-          author_id: this.data.keywords
+          author_nickname: this.data.keywords
         },
         method: "POST",
         header: {

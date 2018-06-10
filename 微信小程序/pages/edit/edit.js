@@ -15,10 +15,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   gettitle:function(e){
-    return e.detail.value
+    this.setData({
+      title:e.detail.value
+    })
   },
   getcontent:function(e){
-    return e.detail.value
+    this.setData({
+      content: e.detail.value
+    })
   },
   submit:function(e){
     var that=this
@@ -69,14 +73,8 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          wx.showToast({
-            title: '更新成功',
-            icon: 'succes',
-            duration: 1000,
-            mask: true
-          })
           wx.reLaunch({
-            url: '/pages/outbox/outbox',
+            url: '/pages/outbox/outbox?flag=1',
           })
         }
       })

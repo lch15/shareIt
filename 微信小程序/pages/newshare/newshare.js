@@ -88,9 +88,8 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log()
-        wx.navigateTo({
-          url: '/pages/item_detail_outbox/item_detail_outbox?id=' + res.data.result + '&head=' + app.globalData.userInfo.avatarUrl + '&title=' + that.data.title + '&create_time=' + " " + '&author=' + app.globalData.userInfo.nickName+'&content='+that.data.content,
+        wx.reLaunch({
+          url: '/pages/outbox/outbox?flag=2',
         })
       }
     })

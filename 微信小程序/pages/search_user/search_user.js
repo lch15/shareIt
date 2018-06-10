@@ -7,7 +7,7 @@ Page({
    */
   data: {
     showData: Data.myData().list,  
-    casArray: ['userid', 'articleid'],
+    casArray: ['按昵称', '按编号'],
     casIndex:0,
     keywords:'',
     showData:[]
@@ -56,7 +56,7 @@ Page({
         wx.request({
           url: 'https://www.yhmeng.top/search_user', //仅为示例，并非真实的接口地址
           data: {
-            author_id: this.data.keywords
+            author_nickname: this.data.keywords
           },
           method: "POST",
           header: {
@@ -86,7 +86,7 @@ Page({
     wx.request({
       url: 'https://www.yhmeng.top/search_user', //仅为示例，并非真实的接口地址
       data: {
-        author_id: options.keywords
+        author_nickname: options.keywords
       },
       method: "POST",
       header: {
