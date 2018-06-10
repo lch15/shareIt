@@ -2,11 +2,13 @@
 
 <scroll-view scroll-y="true" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower" style="height: 100%" >
   <view  wx:for="{{searchresult}}" >
-  
+     <navigator url="/pages/item_detail_delete/item_detail_delete?id={{item.id}}&head={{item.head}}&title={{item.title}}&create_time={{item.create_time}}&author={{item.author}}"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息-->
   <!-- 分割线 -->
   <view class="divLine"></view>
   <!-- 整体item样式 -->
-  <view class="containsView"> 
+  
+  <view class="containsView" > 
+
    <view class="topContainsView">
     <image class="profileImage" src="{{item.head}}" /><!--头像-->
     <view class="topRightView">
@@ -16,17 +18,18 @@
       </view> 
     </view>
       <picker  id='{{index}}' bindchange="bindCasPickerChange" value="" range="{{casArray}}">    
-       <text class="choose"> ˇ</text>
+     
       </picker>
    </view>
    <!-- 中间内容 -->
    
- <navigator url="/pages/item_detail_delete/item_detail_delete?id={{item.id}}&head={{item.head}}&title={{item.title}}&create_time={{item.create_time}}&author={{item.author}}"><!--这个地方向item_detail传参数第二次访问服务器显示某行item具体信息--> 
+ 
  <text class="centerContent">{{item.title}}</text>
- </navigator>
-  </view>
 
+  </view>
+ </navigator>
 </view> 
+
   <view class="divLine"></view>
      <view class="ui-tips">
         <text>—— 没有更多内容了 ——</text>       

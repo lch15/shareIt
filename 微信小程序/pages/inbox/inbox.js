@@ -54,7 +54,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this
+    wx.request({
+      url: 'https://www.yhmeng.top/inbox_list', //仅为示例，并非真实的接口地址
+      data: {
+        user_id: app.globalData.useropenid
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.result)
+        that.setData({
+          searchresult: res.data.result
+        });
+      }
+    })
   },
 
   /**

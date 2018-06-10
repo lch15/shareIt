@@ -1,17 +1,20 @@
 {
   "pages": [
-
+    "pages/search/search",
     "pages/newshare/newshare",
+"pages/search_user/search_user",
+"pages/outbox/outbox",
+    
     "pages/firstpage/firstpage",
     "pages/index/index",
-    "pages/search/search",
+    
   "pages/appendix/appendix",
   "pages/item_detail_outbox/item_detail_outbox",
-    "pages/outbox/outbox",
+    
       "pages/inbox/inbox",
     "pages/edit/edit", 
     "pages/item_detail_delete/item_detail_delete",
-  "pages/search_user/search_user",       
+      
     
     "pages/search_articleid/search_articleid",
     

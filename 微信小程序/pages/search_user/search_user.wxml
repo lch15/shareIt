@@ -5,8 +5,10 @@
        <text>{{casArray[casIndex]}}</text>
       </view>
       </picker>
-  <input type="text" bindinput="searchInputEvent" placeholder="输入搜索"></input><icon bindtap="searchClickEvent"  type="search" size="20"/>
-   
+  <input type="text" bindinput="searchInputEvent" placeholder="输入搜索"></input>
+      <view>
+  <icon bindtap="searchClickEvent"  type="search" size="20"/>
+  </view> 
 </view>
 <scroll-view scroll-y="true" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower" style="height: 100%" >
 

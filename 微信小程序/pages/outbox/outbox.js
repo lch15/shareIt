@@ -64,6 +64,25 @@ Page({
         })
       }
     }
+    this.setData({
+      avatarUrl: app.globalData.userInfo.avatarUrl
+    })
+    var that = this
+    wx.request({
+      url: 'https://www.yhmeng.top/outbox_list', //仅为示例，并非真实的接口地址
+      data: {
+        user_id: app.globalData.useropenid
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.setData({
+          searchresult: res.data.result
+        });
+      }
+    })
   },
 
   /**

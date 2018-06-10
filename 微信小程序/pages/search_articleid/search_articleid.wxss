@@ -34,11 +34,11 @@
   margin-left: 10rpx
 }
 .search-container icon {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  margin-top: -20rpx;
-  right: 40rpx;
+  position: relative;
+  margin-left: 50rpx;
+  height: 20rpx;
+  margin-top: 10rpx;
+  right: 20rpx;
 }
 
 

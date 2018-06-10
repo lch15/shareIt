@@ -21,8 +21,9 @@
    font-weight: 100;
    font-family:  '宋体';
  color: #b8b2b2;
- margin-left:0 rpx;
+ margin-left:150 rpx;
  margin-top: 0rpx;
+
 }
 /*头部整体样式*/
 .topContainsView{

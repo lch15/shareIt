@@ -14,14 +14,14 @@
   color: white;
   height: 80rpx;
   padding: 10rpx 20rpx;
-  z-index: 100;
+  margin-right: 0;
 }
 .pick{
   background: #FFF;
   color: grey;
   padding: 5px 10rpx;
   height: 40rpx;
-  width: 20%;
+  width: 30%;
   border-radius: 8rpx;
 }
 .search-container input {
@@ -34,12 +34,13 @@
   margin-left: 10rpx
 }
 .search-container icon {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  margin-top: -20rpx;
-  right: 40rpx;
+  position: relative;
+  margin-left: 50rpx;
+  height: 20rpx;
+  margin-top: 10rpx;
+  right: 20rpx;
 }
+.
 
 
 /*整体view样式*/
