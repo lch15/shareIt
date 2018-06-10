@@ -2,7 +2,7 @@
     <view class="book-meta">    
         <view class="meta-info">
         <view class="titleview">  
-        <textarea bindinput='gettitle' placeholder="标题">{{title}}</textarea>
+        <textarea bindinput='gettitle' value='{{title}}' placeholder="标题"></textarea>
         </view>
         <view>
         <text><image class="profileImage" src="/image/my.png" /></text>
@@ -18,8 +18,8 @@
 
     <view class="book-meta">
        
-        <textarea style='height:450px' placeholder="正文" maxlength='5000' bindinput='getcontent'>
-        {{content}}
+        <textarea value='{{content}}' style='height:450px' placeholder="正文" maxlength='5000' bindinput='getcontent'>
+        
         </textarea>
 
     </view>

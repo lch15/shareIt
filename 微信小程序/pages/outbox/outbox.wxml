@@ -9,7 +9,7 @@
 
   <view class="containsView">    
    <view class="topContainsView">
-     <image class="profileImage" src="/image/inform_icon.png" /><!--头像-->
+     <image class="profileImage" src="{{avatarUrl}}" /><!--头像-->
     <view class="topRightView">
    
       <view class="bottomItemView">

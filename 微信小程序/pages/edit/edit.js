@@ -15,14 +15,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   gettitle:function(e){
-    this.setData({
-      title:e.detail.value
-    })
+    return e.detail.value
   },
   getcontent:function(e){
-    this.setData({
-      content: e.detail.value
-    })
+    return e.detail.value
   },
   submit:function(e){
     var that=this
@@ -92,7 +88,6 @@ Page({
     content:options.content,
     id:options.id
   })
-  console.log(options.title)
   },
 
   /**
